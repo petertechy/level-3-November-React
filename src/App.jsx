@@ -19,6 +19,7 @@ import ProductPage from './pages/ProductPage'
 import ClassReact from './components/ClassReact'
 import Register from './pages/Register'
 import Signin from './pages/Signin'
+import Ref from './pages/Ref'
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <Route path='class' element={<ClassReact title="Elizabeth"/>}/>
         <Route path='register' element={<Register/>}/>
         <Route path='signin' element={<Signin/>}/>
+        <Route path='ref' element={<Ref/>}/>
 
         {/* Dynamic Route */}
         <Route path='product-details/:id' element={<ProductDetails/>} />
