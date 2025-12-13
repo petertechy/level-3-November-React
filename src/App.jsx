@@ -20,8 +20,10 @@ import ClassReact from './components/ClassReact'
 import Register from './pages/Register'
 import Signin from './pages/Signin'
 import Ref from './pages/Ref'
+import UserDashboard from './pages/UserDashboard'
 
 const App = () => {
+  let token = localStorage.token
   return (
     <>
     <Navbar/>
@@ -41,6 +43,7 @@ const App = () => {
         <Route path='register' element={<Register/>}/>
         <Route path='signin' element={<Signin/>}/>
         <Route path='ref' element={<Ref/>}/>
+        <Route path='user-dashboard' element={token ? <UserDashboard/> : <Navigate to="/signin"/>}/>
 
         {/* Dynamic Route */}
         <Route path='product-details/:id' element={<ProductDetails/>} />
